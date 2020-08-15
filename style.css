@@ -30,8 +30,8 @@ a {
 }
 */
 
-/*banner section*/
-/*banner background*/
+/*banner section starts*/
+/*banner background starts*/
 #banner {
     background-image: url('./img/pexels-canva-studio-520.jpg');
     background-position: center;
@@ -53,7 +53,7 @@ a {
     z-index: -1;
 }
 
-/*alternate code for banner background*/
+/*alternate code for banner background (Line No. 35 to 54)*/
 /*
 #banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/pexels-canva-studio-520.jpg");
@@ -63,15 +63,65 @@ a {
     background-attachment: fixed;
   }
 */
+/*banner background ends*/
 
+/*banner text starts*/
 #banner h1 {
     display: block;
     width: fit-content;
     font-size: 4rem;
     position: relative;
-    color: white;
+    color: transparent;
+    animation: 1s animation-text ease forwards;
+    animation-delay: 1s;
 }
 
+#banner h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#banner h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#banner h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: .5s animation-box ease;
+    animation-delay: 1s;
+}
+
+#banner h1:nth-child(1) span {
+    animation-delay: 1s;
+}
+
+#banner h1:nth-child(2) span {
+    animation-delay: 2s;
+}
+
+@keyframes animation-box {
+    50% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
+
+@keyframes animation-text {
+    100% {
+        color: white;
+    }
+}
+/*banner text ends*/
+
+/*banner button starts*/
 #banner .cta {
     display: inline-block;
     margin: 20px auto;
@@ -92,5 +142,6 @@ a {
     font-weight: bold;
     color: black;
 }
-
+/*banner button ends*/
+/*banner section ends*/
 
