@@ -24,9 +24,11 @@ a {
     justify-content: center;
 }
 
+/*
 .banner-items {
     margin-top: 200px;
 }
+*/
 
 /*banner section*/
 /*banner background*/
@@ -72,7 +74,7 @@ a {
 
 #banner .cta {
     display: inline-block;
-    margin: 100px auto;
+    margin: 20px auto;
     padding:  10px 20px;
     width: fit-content;
     font-size: 3rem;
