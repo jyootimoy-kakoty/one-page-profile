@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+  
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*banner section*/
+/*banner background*/
+#banner {
+    background-image: url('./img/pexels-canva-studio-520.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+
+/*alternate code for banner background*/
+/*
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/pexels-canva-studio-520.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+*/
+
+#banner h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: white;
+}
+
+#banner .cta {
+    display: inline-block;
+    margin: 20px auto;
+    padding:  10px 20px;
+    width: fit-content;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: .2s ease color, background-color;
+}
+
+#banner .cta:hover {
+    border: 2px solid crimson;
+    background-color: crimson;
+    font-weight: bold;
+    color: black;
+}
