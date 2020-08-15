@@ -91,7 +91,7 @@ a {
     height: 100%;
     width: 0;
     background-color: crimson;
-    animation: .5s animation-box ease;
+    animation: .6s animation-box ease;
     animation-delay: 1s;
 }
 
