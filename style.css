@@ -72,15 +72,23 @@ a {
     font-size: 6vw;
     position: relative;
     color: transparent;
+    -webkit-animation: 1s animation-text ease forwards;
+    -moz-animation: 1s animation-text ease forwards;
     animation: 1s animation-text ease forwards;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
     animation-delay: 1s;
 }
 
 #banner h1:nth-child(1) {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
     animation-delay: 1s;
 }
 
 #banner h1:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
     animation-delay: 2s;
 }
 
@@ -92,14 +100,20 @@ a {
     width: 0;
     background-color: crimson;
     animation: .6s animation-box ease;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
     animation-delay: 1s;
 }
 
 #banner h1:nth-child(1) span {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
     animation-delay: 1s;
 }
 
 #banner h1:nth-child(2) span {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
     animation-delay: 2s;
 }
 
@@ -157,7 +171,7 @@ a {
 
 #services .section-title {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: .2rem;
     margin-bottom: 15px;
@@ -190,7 +204,12 @@ a {
     margin: 15px 10%;
     padding: 25px 25px 25px;
     border-radius: 10px;
-    box-shadow: -1px 1px 15px -10px rgba(0,0,0,1);
+    -webkit-box-shadow:-1px 1px 15px -10px rgba(0,0,0,1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: -1px 1px 15px -10px rgba(0,0,0,1); /* Firefox 3.5 - 3.6 */
+    box-shadow: -1px 1px 15px -10px rgba(0,0,0,1); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    --h2color: darkblue;
+    --pcolor: black;
+    --pfontsize: .9rem;
 }
 
 #services .service-item .icon img {
@@ -201,16 +220,30 @@ a {
 
 #services .service-item h2 {
     font-size: 1.3rem;
-    color: darkblue;
+    color: var(--h2color);
     text-transform: uppercase;
     width: fit-content;
     margin: 25px 25px 0;
 }
 
 #services .service-item p {
-    font-size: .9rem;
+    font-size: var(--pfontsize);
     font-weight: 280;
     text-align: left;
-    margin: 0 25px;
+    color: var(--pcolor);
+    margin: 10px 25px 0;
 }
+
+#services .service-item:hover {
+    border: 2px solid crimson;
+    background-color: crimson;
+    transform: scale(1.025);
+    /*background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, 0.1)), url("./img/icons8-services (3).svg");*/
+    color: white;
+    opacity: 1;
+    --h2color: white;
+    --pcolor: darkblue;
+    --pfontsize: .9rem;
+}
+
 /*services section ends*/
