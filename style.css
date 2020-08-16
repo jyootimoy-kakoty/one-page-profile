@@ -69,7 +69,7 @@ a {
 #banner h1 {
     display: block;
     width: fit-content;
-    font-size: 4rem;
+    font-size: 6vw;
     position: relative;
     color: transparent;
     animation: 1s animation-text ease forwards;
@@ -127,7 +127,7 @@ a {
     margin: 20px auto;
     padding:  10px 20px;
     width: fit-content;
-    font-size: 3rem;
+    font-size: 3vw;
     text-transform: uppercase;
     letter-spacing: .1rem;
     background-color: transparent;
@@ -145,3 +145,72 @@ a {
 /*banner button ends*/
 /*banner section ends*/
 
+/*services section starts*/
+#services {}
+
+#services .services {
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#services .section-title {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 15px;
+    color: black;
+}
+
+#services .section-title span {
+    color: crimson;
+}
+
+#services .service-header p {
+    font-size: 1.2rem;
+    margin: 5px;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+#services .service-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#services .service-item {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px 10%;
+    padding: 25px 25px 25px;
+    border-radius: 10px;
+    box-shadow: -1px 1px 15px -10px rgba(0,0,0,1);
+}
+
+#services .service-item .icon img {
+    width: fit-content;
+    height: 75%;
+    width: 50%;
+}
+
+#services .service-item h2 {
+    font-size: 1.3rem;
+    color: darkblue;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 25px 25px 0;
+}
+
+#services .service-item p {
+    font-size: .9rem;
+    font-weight: 280;
+    text-align: left;
+    margin: 0 25px;
+}
+/*services section ends*/
