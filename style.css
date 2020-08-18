@@ -503,3 +503,55 @@ a {
     --pfontsize: .9rem;
 }
 /*contact info section ends*/
+
+/*footer section starts*/
+#footer .footer {
+    background: crimson;
+    min-height: 300px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 0 10px;
+}
+
+#footer .footer h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+}
+
+#footer .section-title span {
+    color: darkblue;
+    font-weight: bold;
+}
+
+#footer .footer h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#footer .social-profiles {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#footer .profile {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#footer .profile img {
+    height: 45px;
+    width: 45px;
+}
+
+#footer .profile:hover img {
+    transform: scale(1.1);
+    background-color: white;
+    border-radius: 60%;
+}
+
+#footer .footer p {
+    font-size: 1rem;
+}
+
+/*footer section ends*/
