@@ -24,6 +24,20 @@ a {
     justify-content: center;
 }
 
+.cta {
+    display: inline-block;
+    margin: 20px auto;
+    padding:  10px 20px;
+    width: fit-content;
+    font-size: 3vw;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: .2s ease color, background-color;
+}
+
 .section-title {
     font-size: 2rem;
     font-weight: 400;
@@ -150,20 +164,6 @@ a {
 /*banner text ends*/
 
 /*banner button starts*/
-#banner .cta {
-    display: inline-block;
-    margin: 20px auto;
-    padding:  10px 20px;
-    width: fit-content;
-    font-size: 3vw;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    transition: .2s ease color, background-color;
-}
-
 #banner .cta:hover {
     border: 2px solid crimson;
     background-color: crimson;
@@ -286,9 +286,9 @@ a {
 #projects .project-info {
     text-align: left;
     width: fit-content;
-    --background-img: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    /*--background-img: linear-gradient(60deg, #29323c 0%, #485563 100%);
     background-image: var(--background-img)
-    color: white;
+    color: white;*/
 }
 
 #projects .project-info h1 {
@@ -330,3 +330,100 @@ a {
     --pfontsize: .9rem;
 }
 /*recent projects section ends*/
+
+/*about me section starts*/
+#about-me .about-me {
+    flex-direction: column-reverse;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#about-me .column-left {
+    height: 360px;
+    width: 250px;
+}
+
+#about-me .column-right {
+    width: 100%;
+}
+
+#about-me .column-right h1 {
+    margin-bottom: 15px;
+}
+
+#about-me .column-right h2 {
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about-me .column-right p {
+    font-size: .9rem;
+    font-weight: 280;
+    /*color: var(--pcolor);*/
+    margin: 0 25px 25px;
+}
+
+#about-me .column-right .cta {
+    font-size: 2.5vw;
+    letter-spacing: .05rem;
+    border: 2px solid black;
+    color: black;
+}
+
+#about-me .column-right .cta:hover {
+    border: 2px solid crimson;
+    background-color: crimson;
+    font-weight: bold;
+    color: white;
+}
+
+#about-me .about-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#about-me .about-img img {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: 25px;
+    border: 10px solid white;
+}
+
+#about-me .about-img::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 19px;
+    width: 98%;
+    height: 98%;
+    border: 7px solid crimson;
+    margin-top: 25px;
+    z-index: -1;
+}
+
+#about-me .about-img::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 92%;
+    height: 95%;
+    margin-top: 25px;
+    border: 10px solid white;
+    background: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, 0.5));
+    --z-value: 3;
+    z-index: var(--z-value);
+}
+
+#about-me .about-img:hover::before {
+    --z-value: -3;
+}
+/*about me section ends*/
+
