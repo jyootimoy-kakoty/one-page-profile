@@ -229,7 +229,7 @@ a {
 #services .service-item p {
     font-size: var(--pfontsize);
     font-weight: 280;
-    text-align: left;
+    text-align: justify;
     color: var(--pcolor);
     margin: 10px 25px 0;
 }
@@ -284,7 +284,7 @@ a {
 }
 
 #projects .project-info {
-    text-align: left;
+    text-align: justify;
     width: fit-content;
     /*--background-img: linear-gradient(60deg, #29323c 0%, #485563 100%);
     background-image: var(--background-img)
@@ -334,7 +334,7 @@ a {
 /*about me section starts*/
 #about-me .about-me {
     flex-direction: column-reverse;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 100px 0;
 }
@@ -361,7 +361,7 @@ a {
     font-size: .9rem;
     font-weight: 280;
     /*color: var(--pcolor);*/
-    margin: 0 25px 25px;
+    margin: 0 10px 25px;
 }
 
 #about-me .column-right .cta {
@@ -430,16 +430,13 @@ a {
 /*contact info section starts*/
 #contact-info .contact-info {
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 400px;
     margin: 0 auto;
     padding: 100px 0;
 }
 
-#contact-info .contact-header p {
-    font-size: 1.2rem;
-    margin: 5px;
-    font-weight: 300;
-    letter-spacing: .05rem;
+#contact-info .contact-header h1 {
+    margin-bottom: 50px;
 }
 
 #contact-info .contact-footer {
@@ -555,3 +552,114 @@ a {
 }
 
 /*footer section ends*/
+
+/*media queries for tablet starts*/
+@media only screen and (min-width: 768px) {
+    /*services section starts*/
+    #services .service-item {
+        flex-basis: 45%;
+        margin: 2%;
+    }
+    /*services section ends*/
+
+    /*recent projects section starts*/
+    #projects .project-item {
+        flex-basis: 100%;   
+        margin: 2%;
+        height: 250px;
+        flex-direction: row;
+    }
+
+    #projects .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #projects .project-info {
+        text-align: justify;
+        width: 85%;
+    }
+     
+    /*recent projects section ends*/
+
+    /*about me section starts*/
+    #about-me .about-me {
+        flex-direction: row;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+
+    #about-me .column-left {
+        height: 360px;
+        width: 400px;
+        margin-right: 20px;
+        margin-left: 50px;
+    }
+
+    #about-me .column-right {
+        text-align: left;
+        margin: 20px;
+    }
+    
+    #about-me .column-right h2 {
+        font-size: 1rem;
+    }
+    
+    #about-me .column-right p {
+        font-size: 1rem;
+        text-align: justify;
+        /*color: var(--pcolor);*/
+        margin: 0 0 25px;
+        margin-right: 20px;
+    }
+    /*about me section ends*/
+
+    /*contact info section starts*/
+    #contact-info .contact-footer {
+        flex-wrap: nowrap;
+    }
+
+    #contact-info .contact-item {
+        width: 280px;
+        height: 165px;
+        flex-basis: 28%;
+        margin: 1%;
+        padding: 25px 5px 10px;
+    }
+    
+    #contact-info .contact-item p {
+        font-size: .8rem;
+        margin: 2px 25px 0;
+    }
+    /*contact info section ends*/
+}
+/*media queries for tablet ends*/
+
+/*media queries for desktop starts*/
+@media only screen and (min-width: 1200px) {
+    #services .service-item {
+        flex-basis: 20%;
+        margin: 2%;
+    }
+
+    #about-me .column-right .cta {
+        font-size: 2vw;
+        letter-spacing: .05rem;
+        border: 2px solid black;
+        color: black;
+    }
+
+    #contact-info .contact-item {
+        width: 320px;
+        height: 180px;
+        flex-basis: 35%;
+        margin: 2%;
+        padding: 25px 10px 10px;
+    }
+    
+    #contact-info .contact-item p {
+        font-size: .9rem;
+        margin: 2px 25px 0;
+    }
+}
+/*media queries for desktop ends*/
