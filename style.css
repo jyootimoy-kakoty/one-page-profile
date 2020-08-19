@@ -642,6 +642,10 @@ a {
         margin: 2%;
     }
 
+    #projects .projects {
+        max-width: 1000px;
+    }
+    
     #about-me .column-right .cta {
         font-size: 2vw;
         letter-spacing: .05rem;
